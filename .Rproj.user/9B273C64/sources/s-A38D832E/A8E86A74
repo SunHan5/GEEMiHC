@@ -1,0 +1,25 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1623248919552.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "0",
+    "id" : "A8E86A74",
+    "lastKnownWriteTime" : 1623245976,
+    "last_content_update" : 1623245976,
+    "path" : "D:/R_pro/GEEMiHC/R/GEEMiHC.R",
+    "project_path" : "R/GEEMiHC.R",
+    "properties" : {
+        "cursorPosition" : "6,4",
+        "scrollLine" : "0"
+    },
+    "read_only" : false,
+    "read_only_alternatives" : [
+    ],
+    "relative_order" : 5,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_source"
+}
