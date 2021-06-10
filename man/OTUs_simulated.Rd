@@ -2,50 +2,42 @@
 \alias{OTUs_simulated}
 \title{OTUs_simulated}
 \usage{
-OTUs_simulated(data, nSam, nOTU, n_repeat, mu, size)
+OTUs_simulated(data, nSam, parameters, mu, size)
 }
 \description{
-We used a phylogenetic tree of OTUs from a real throat microbiome data set, which consists of
-856 OTUs after discarding singleton OTUs. Then based on a complicate statistical meodel, we
-generated the OTU counts for each individual to simulate the feature of real microbiome data.
+We generate the OTUs count table simulated based on the Dirichlet-multinomial model according to real data.
 }
 
 \arguments{
-  \item{data}{
-Real data.
+  \item{data}{Real data.
 }
   \item{nSam}{Sample size.
+}
+  \item{parameters}{The estimated parameter based on a real microbiome data, including OTU proportions and overdispersion parameter.
 
 }
-  \item{nOTU}{
-The number of OTUs.
+  \item{mu}{The mean of the negative binomial distribution.
 }
-  \item{n_repeat}{
-The number of repeat.
-
-}
-  \item{mu}{
-The mean of the negative binomial distribution.
-}
-  \item{size}{
-The size of the negative binomial distribution.
+  \item{size}{The size of the negative binomial distribution.
 }
 
 }
 
 \value{
-OTU_simulated: OTU counts table simulated based on real data.
+OTU: OTU counts table simulated based on real data.
 
 }
 
 
 
 \examples{
-# Import requisite R packages
-library(MiSPU)
-
 #Simulated OTUs
-data("throat.otu.tab")
-otu.tab <- round(OTUs_simulated(data=throat.otu.tab, nSam=100, nOTU=100, n_repeat=10, mu=1000, size=25)$OTU_simulated)
+library(dirmult)
+data("throat.otu.tab", package = "MiSPU")
+nOTU = 100
+otu_sum <- apply(throat.otu.tab, 2, sum)
+throat.otu.tab.100 <- throat.otu.tab[, order(otu_sum, decreasing = TRUE)[1:nOTU]]
+parameters <- dirmult(throat.otu.tab.100)
+otu.tab <- OTUs_simulated(throat.otu.tab.100, nSam = 50, parameters=parameters, mu = 1000, size = 25)
 
 }
