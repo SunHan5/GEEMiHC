@@ -9,7 +9,7 @@ Description: GEEMiHC detects sparse microbial association signals
          between microbiome and a host phenotype from longitudinal 
          microbiome data. As a special case of longitudinal data, 
          cross-sectional microbiome data can be also applied.
-Imports: phyloseq, cluster, compositions, permute, PGEE, vegan, ape, aSPU, MiSPU, devtools
+Imports: phyloseq, cluster, compositions, permute, PGEE, vegan, ape, aSPU, MiSPU, devtools, MiHC
 License: GPL-2
 Encoding: UTF-8
 LazyData: true

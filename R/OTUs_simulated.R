@@ -1,4 +1,4 @@
-OTUs_simulated <- function(data, nSam=100, parameters, mu = 1000, size = 25) {
+SimulateOTU <- function(data, nSam=100, parameters, mu = 1000, size = 25) {
 
     otu.ids <- colnames(data)
     p.est = parameters$pi

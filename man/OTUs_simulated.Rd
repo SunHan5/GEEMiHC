@@ -1,8 +1,8 @@
-\name{OTUs_simulated}
-\alias{OTUs_simulated}
-\title{OTUs_simulated}
+\name{SimulateOTU}
+\alias{SimulateOTU}
+\title{SimulateOTU}
 \usage{
-OTUs_simulated(data, nSam, parameters, mu, size)
+SimulateOTU(data, nSam, parameters, mu, size)
 }
 \description{
 We generate the OTUs count table simulated based on the Dirichlet-multinomial model according to real data.
@@ -38,6 +38,6 @@ nOTU = 100
 otu_sum <- apply(throat.otu.tab, 2, sum)
 throat.otu.tab.100 <- throat.otu.tab[, order(otu_sum, decreasing = TRUE)[1:nOTU]]
 parameters <- dirmult(throat.otu.tab.100)
-otu.tab <- OTUs_simulated(throat.otu.tab.100, nSam = 50, parameters=parameters, mu = 1000, size = 25)
+otu.tab <- SimulateOTU(throat.otu.tab.100, nSam = 50, parameters=parameters, mu = 1000, size = 25)
 
 }
