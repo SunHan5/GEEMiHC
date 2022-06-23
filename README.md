@@ -177,7 +177,7 @@ out
 
 
 ## References
-* Sun H, et al. Detecting sparse microbial association signals adaptively from longitudinal microbiome data based on generalized estimating equations. (under review)
+* Sun H, et al. Detecting sparse microbial association signals adaptively from longitudinal microbiome data based on generalized estimating equations. _Briefings in Bioinformatics_, page bbac149, 2022.
 
 * Koh H and Zhao N. A powerful microbial group association test based on the higher criticism analysis for sparse microbial association signals. _Microbiome_ 2020;**8**(1):63.
 
